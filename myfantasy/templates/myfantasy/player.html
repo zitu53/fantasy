@@ -1,0 +1,27 @@
+{% include "myfantasy/base.html" %}
+<html>
+<body id="base-top" class="index">
+<section>
+	<div class="containter">
+		<div class="row">
+			<div class="col-lg-6">Image Here</div>
+			<div class="col-lg-6">
+				<table class="table table-striped">
+					<tr><td><h4>{{ player.name }}</h4></td></tr>
+					<tr>
+						<td>Team : {{ player.team.name }}</td>
+						<td>Position : {{ player.position }}</td>
+					</tr>
+					<tr>
+						<td>Goals : {{ player.goals }}</td>
+						<td>Assists : {{ player.assists }}</td>
+					</tr>
+					<tr><td><h4>${{ player.price }}</h4></td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+	
+</html>
