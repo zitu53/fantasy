@@ -9,7 +9,7 @@
 				<table class="table table-striped">
 					<tr><td><h4>{{ player.name }}</h4></td></tr>
 					<tr>
-						<td>Team : {{ player.team.name }}</td>
+						<td>Team : <a href="{% url 'team_details' player.team.id %}">{{ player.team.name }}</a></td>
 						<td>Position : {{ player.position }}</td>
 					</tr>
 					<tr>

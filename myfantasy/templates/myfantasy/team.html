@@ -7,7 +7,7 @@
 			<div class="col-lg-3"></div>
 			<div class="col-lg-6">
 				<table class="table table-striped">
-					<tr><td><h4>{{ team.name }}</h4></td></tr>
+					<tr><td><h2>{{ team.name }}</h2></td></tr>
 					<tr>
 						<th>Played</th>
 						<th>Won</th>
@@ -24,6 +24,15 @@
 						
 					</tr>
 					<tr><td><h4>Owner : {{ team.owner }}</h4></td></tr>
+				</table>
+				<table class="table table-striped">
+					<tr><td><h3>Team Sheet</h3></td></tr>
+					{% for player in players %}
+					<tr>
+						<td><a href="{% url 'player_details' player.id %}">{{ player.name }}</a></td>
+						<td>{{ player.position }}</td>
+					</tr>
+					{% endfor %}
 				</table>
 			</div>
 			<div class="col-lg-3"></div>
